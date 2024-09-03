@@ -285,3 +285,54 @@ try {
 } catch (error) {
     
 }
+
+
+try {    
+    function setTheme(theme) {
+        let bootstarpHref;
+        let styleHref;
+        let color = '';
+        if(window.theme)
+            color = '-'+window.theme;
+        switch (theme) {
+            case "style-dark":
+                bootstarpHref =  "assets/css/bootstrap-dark"+color+".min.css"
+                styleHref = "assets/css/style-dark"+color+".min.css"
+                break;
+            case "style-rtl":
+                bootstarpHref =  "assets/css/bootstrap"+color+"-rtl.min.css"
+                styleHref = "assets/css/style"+color+"-rtl.min.css"
+                break;
+            case "style-dark-rtl":
+                bootstarpHref =  "assets/css/bootstrap-dark"+color+"-rtl.min.css"
+                styleHref = "assets/css/style-dark"+color+"-rtl.min.css"
+                break;               
+        
+            default:
+                bootstarpHref =  "assets/css/bootstrap"+color+".min.css"
+                styleHref = "assets/css/style"+color+".min.css"
+                break;
+        }
+
+        if(theme === "style-rtl" || theme === "style-dark-rtl"   ) document.getElementsByTagName("html")[0].dir = "rtl"
+        else  document.getElementsByTagName("html")[0].dir = "ltr"
+       
+        document.getElementsByClassName('theme-opt')[0].href =bootstarpHref
+        document.getElementsByClassName('theme-opt')[1].href =styleHref
+    };
+
+    function setColor(theme) {
+        window.theme = theme;
+        document.getElementById('bootstrap-style').href = 'assets/css/bootstrap-' + theme + '.min.css';
+        document.getElementById('color-opt').href = 'assets/css/style-' + theme + '.min.css';
+    };
+    
+    function setColorPrimary() {
+        window.theme = null;
+        document.getElementById('bootstrap-style').href = 'assets/css/bootstrap.min.css';
+        document.getElementById('color-opt').href = 'assets/css/style.min.css';
+    };
+
+} catch (error) {
+    
+}
