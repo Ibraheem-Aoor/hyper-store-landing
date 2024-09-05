@@ -341,7 +341,7 @@ function setColorPrimary() {
     document.getElementById('color-opt').href = 'assets/css/style.min.css';
 };
 
-if(document.getElementsByClassName('tiny-three-item').length > 0) {
+if (document.getElementsByClassName('tiny-three-item').length > 0) {
     var slider = tns({
         container: '.tiny-three-item',
         controls: false,
@@ -369,3 +369,14 @@ if(document.getElementsByClassName('tiny-three-item').length > 0) {
         },
     });
 };
+
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/66d944e050c10f7a00a42ddb/1i70ba3db';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+
+})();
