@@ -24,7 +24,7 @@
  ================================*/
 
 
-window.addEventListener('load', fn, false)
+document.addEventListener("DOMContentLoaded", fn)
 
 //  window.onload = function loader() {
 function fn() {
